@@ -12,7 +12,7 @@ $psr7 = new Spiral\RoadRunner\PSR7Client($worker, $psr17Factory, $psr17Factory, 
 while ($req = $psr7->acceptRequest()) {
     try {
         $resp = $psr17Factory->createResponse();
-        $resp->getBody()->write('Hello world from RoadRunner!');
+        $resp->getBody()->write((string) (microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']));
         $psr7->respond($resp);
     } catch (Throwable $e) {
         $psr7->getWorker()->error((string)$e);
