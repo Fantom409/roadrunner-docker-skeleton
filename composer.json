@@ -4,6 +4,7 @@
     "keywords": ["roadrunner", "docker"],
     "type": "project",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "n1215",
@@ -13,7 +14,8 @@
     "require": {
         "php": "^7.4",
         "nyholm/psr7": "^1.2",
-        "spiral/roadrunner": "1.6.1"
+        "spiral/roadrunner": "1.6.1",
+        "yiisoft/profiler": "^3.0@dev"
     },
     "scripts": {
         "post-create-project-cmd": [
